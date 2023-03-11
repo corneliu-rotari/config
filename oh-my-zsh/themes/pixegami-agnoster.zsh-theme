@@ -76,6 +76,7 @@ prompt_git() {
     if [[ -n $dirty ]]; then
       prompt_segment yellow black
     else
+	
       prompt_segment 014 002
     fi
 
