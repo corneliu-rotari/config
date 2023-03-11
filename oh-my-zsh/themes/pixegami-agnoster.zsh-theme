@@ -76,12 +76,7 @@ prompt_git() {
     if [[ -n $dirty ]]; then
       prompt_segment yellow black
     else
-	count_commits_ahed=$(git_prompt_ahead)
-	if [[ -n $count_commits_ahed ]];then
-	      prompt_segment 014 002
-	else
-		prompt_segment cyan 255
-	fi
+	prompt_segment 014 002
     fi
 
     if [[ -e "${repo_path}/BISECT_LOG" ]]; then
