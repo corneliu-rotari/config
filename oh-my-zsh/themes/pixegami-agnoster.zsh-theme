@@ -76,8 +76,8 @@ prompt_git() {
     if [[ -n $dirty ]]; then
       prompt_segment yellow black
     else
-	count_commits_ahed=$(__git_prompt_git rev-list origin/$(git_current_branch)..HEAD | wc -l)
-	if [[ $count_commits_ahed -eq 0 ]];then
+	count_commits_ahed=$(git_prompt_ahead)
+	if [[ -n $count_commits_ahed ]];then
 	      prompt_segment 014 002
 	else
 		prompt_segment cyan 255
