@@ -1,12 +1,15 @@
-# configuration
+# Environment Configuration
 
 This repository contains configuration files for various tools used in a development environment, including editors, terminals, and shell environments.
+
 These configuration files can be used to set up a consistent and efficient development environment across multiple machines.
 
 ![](./assets/terminal.png)
 
 
 ![](./assets/editor.png)
+
+---
 
 ## Getting Started
 
