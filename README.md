@@ -1,3 +1,30 @@
 # configuration
 
-My configuration for oh-my-zsh, editor, and terminal 
+This repository contains configuration files for various tools used in a development environment, including editors, terminals, and shell environments.
+These configuration files can be used to set up a consistent and efficient development environment across multiple machines.
+
+![](./assets/terminal.png)
+
+
+![](./assets/editor.png)
+
+## Getting Started
+
+### Prerequisite
+
+1. There should Nerd Fonts installed for an optimal experience [Install](https://www.nerdfonts.com/).
+
+### Installation
+
+1.  Clone this repository
+
+```bash
+git clone https://github.com/corneliu-rotari/config.git
+cd config
+```
+
+2. Run the install script
+
+```bash
+./install.sh
+```
