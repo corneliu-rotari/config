@@ -4,7 +4,7 @@
 echo "\n\n====[Update system and installing dependencies]====\n\n"
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
-sudo apt install git zsh curl gcc valgrind g++ make python3 pip3
+sudo apt install git zsh curl gcc valgrind g++ make python3 pip3 zip unzip
 zsh -c "$(curl -fsSL https://gef.blah.cat/sh)"
 
 # Import profile
@@ -14,13 +14,13 @@ source ~/.zshrc
 # Install Node Version Manager 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
-# Here should be the instalation of the nerd fonts
-echo "\n\nInstalled nerd_fonts [yes/no] : "
-read nerd_fonts
+# Installing Nerd Fonts
+echo "\n\n"
+read -p "Installed nerd_fonts [yes/no] : " nerd_fonts
 
 if [ $nerd_fonts = "no" ]; then
-  echo "\nPlease install them at https://www.nerdfonts.com/"
-  exit 0
+  echo "\nPlease install at https://www.nerdfonts.com/"
+  read done
 fi
 
 # Install oh-my-zsh and plugins
@@ -48,6 +48,8 @@ sudo apt update
 sudo add-apt-repository ppa:openjdk-r/ppa
 sudo apt install openjdk-19-jdk
 sudo apt install openjdk-19-source
-sudo echo "JAVA_HOME=\"/usr/lib/jvm/java-19-openjdk-amd64\"" >> /etc/environment
+JAVA_HOME=$(dirname $(dirname $(readlink -f $(which java)))
+sudo sh -c "echo 'JAVA_HOME=$JAVA_HOME' >> /etc/environment"
 source /etc/environment
 sudo snap install intellij-idea-ultimate --classic
+
