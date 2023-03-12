@@ -31,3 +31,11 @@ cd config
 ```bash
 ./install.sh
 ```
+
+---
+
+## Contributing
+
+If you have a configuration file that you think would be useful to others, feel free to submit a pull request to add it to this repository.
+
+Similarly, if you notice any issues with the existing configuration files, please submit a pull request with the fix.
