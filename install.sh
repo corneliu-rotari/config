@@ -5,6 +5,7 @@ echo "\n\n====[Update system and installing dependencies]====\n\n"
 sudo add-apt-repository ppa:git-core/ppa
 sudo apt update
 sudo apt install git zsh curl gcc valgrind g++ make python3 pip3
+zsh -c "$(curl -fsSL https://gef.blah.cat/sh)"
 
 # Import profile
 cp .zshrc ~
